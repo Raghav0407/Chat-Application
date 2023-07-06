@@ -13,3 +13,4 @@ Clone this repository ,
 1. Add all the public dependencies,
 2. Add all the server dependencies,
 3. Start your app using npm start
+4. Start server using nodemon 
