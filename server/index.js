@@ -5,7 +5,7 @@ const mongoose=require('mongoose');
 const userRoutes =require("./routes/userRoutes")
 const messagesRoute = require("./routes/messagesRoute");
 const socket = require('socket.io');
-const path = require('path');
+//const path = require('path');
 
 
 //Making our backend app
@@ -16,11 +16,11 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/auth",userRoutes)
 app.use("/api/messages",messagesRoute)
-app.use(express.static(path.join(__dirname,'./public/build')));
+// app.use(express.static(path.join(__dirname,'./public/build')));
 
-app.get('*',function(req,res){
-    res.sendFile(path.join(__dirname,'./public/build/index.html'));
-})
+// app.get('*',function(req,res){
+//     res.sendFile(path.join(__dirname,'./public/build/index.html'));
+// })
 
 
 const PORT1= process.env.PORT;
